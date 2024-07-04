@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de E-mail</h1>
+    <!--API DO FORMSUBMIT-->
+    <form action="https://formsubmit.co/lucaspassos2002@gmail.com" method="POST" class="form">
+
+        <label for="name">NOME:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">E-MAIL:</label>
+        <input type="email" name="email" id="email"  required>
+        <label for="message">MENSAGEM:</label>
+        <textarea name="message" id="message" placeholder="escreva algo"></textarea>
+
+        <!--ESSE COMANDO FAZ COM QUE O CAPTCHA SUMA SEM PRECISAR CONFIRMAR ALGUMA COISA-->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!--Será direcionado ao html de agradecimento-->
+        <input type="hidden"
+         name="_next" 
+         value="http://127.0.0.1:5500/obrigado.html">
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
